@@ -1,0 +1,22 @@
+# 开发环境配置：按你本机的实际环境修改
+# 注意：数据库名是 shangxu_crm（下划线），不是 shangxu-crm
+shangxuyun:
+  mysql:
+    host: 192.168.126.128
+    port: 3306
+    db: shangxu_crm
+    username: root
+    password: root
+  redis:
+    host: localhost
+    port: 6379
+    # 本地 Redis 没有密码就留空；如果设置了 requirepass 再填
+    password:
+    redisdb: 0
+  crm:
+    jwt:
+      # 生产环境请通过环境变量 CRM_JWT_SECRET 覆盖（长度需 >= 32）
+      secret: CHANGE_ME_BEFORE_DEPLOY_AT_LEAST_32_CHARS_LONG
+      expire: 28800
+    cors:
+      allowed-origins: http://localhost:*,http://127.0.0.1:*,http://localhost,http://127.0.0.1

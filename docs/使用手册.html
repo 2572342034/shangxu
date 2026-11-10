@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>商序云 · 销售运营一体化平台 使用手册</title>
+<style>
+@page { size: A4; margin: 2.2cm 2.0cm; @bottom-center { content: "第 " counter(page) " 页"; font-family: "SimSun"; font-size: 9pt; color: #8b97a8; } @top-right { content: "商序云 · 使用手册 v4.0"; font-family: "SimSun"; font-size: 8.5pt; color: #b0bac9; } }
+@page cover { margin: 0; @bottom-center { content: none; } @top-right { content: none; } }
+section[role="cover"] { page: cover; }
+body { font-family: "SimSun", "宋体", serif; font-size: 12pt; line-height: 1.75; color: #1f2a3d; }
+p { text-indent: 2em; margin: 0 0 6pt 0; text-align: justify; }
+h1 { font-family: "SimHei", "黑体", sans-serif; font-size: 17pt; color: #16233b; margin: 20pt 0 10pt 0; padding-bottom: 4pt; border-bottom: 1.2pt solid #2f6bff; text-indent: 0; }
+h2 { font-family: "SimHei", "黑体", sans-serif; font-size: 13.5pt; color: #1f2a3d; margin: 14pt 0 6pt 0; text-indent: 0; }
+li { font-size: 12pt; margin-bottom: 3pt; line-height: 1.7; }
+table { width: 100%; border-collapse: collapse; margin: 8pt 0 10pt 0; font-size: 10.5pt; }
+th { background-color: #eef3ff; color: #16233b; border: 0.5pt solid #c9d6ef; padding: 5pt 6pt; text-align: left; font-family: "SimHei", "黑体", sans-serif; }
+td { border: 0.5pt solid #d8e0ee; padding: 5pt 6pt; vertical-align: top; }
+pre.code { background-color: #f5f8fd; border-left: 2pt solid #2f6bff; padding: 8pt 10pt; font-family: "Consolas", monospace; font-size: 10pt; text-indent: 0; }
+.cover { padding: 5.2cm 2.4cm 0 2.4cm; }
+.cover-kicker { font-family: "SimHei", "黑体", sans-serif; font-size: 11pt; color: #2f6bff; letter-spacing: 2pt; text-indent: 0; }
+.cover-title { font-family: "SimHei", "黑体", sans-serif; font-size: 34pt; color: #16233b; margin: 14pt 0 8pt 0; line-height: 1.3; text-indent: 0; }
+.cover-sub { font-size: 14pt; color: #5b6779; margin-bottom: 30pt; text-indent: 0; }
+.cover-rule { width: 90pt; height: 3pt; background-color: #2f6bff; margin-bottom: 26pt; }
+.cover-meta { font-size: 11pt; color: #5b6779; line-height: 2; text-indent: 0; }
+.toc-title { font-family: "SimHei", "黑体", sans-serif; font-size: 20pt; color: #16233b; margin: 0 0 18pt 0; text-indent: 0; }
+.toc-list, .toc-list ol, .toc-list ul { list-style: none; padding-left: 0; margin: 0; }
+.toc-list > li { font-size: 12pt; margin-bottom: 7pt; }
+.toc-sub { padding-left: 22pt; margin-top: 4pt; }
+.toc-sub li { font-size: 10.5pt; color: #5b6779; margin-bottom: 3pt; }
+a { color: #1f2a3d; text-decoration: none; }
+.step { text-indent: 0; padding-left: 2em; }
+</style>
+</head>
+<body>
+<section role="cover">
+  <div class="cover">
+    <p class="cover-kicker">SHANGXU CRM · PRODUCT MANUAL</p>
+    <p class="cover-title">商序云<br/>销售运营一体化平台<br/>使用手册</p>
+    <div class="cover-rule"></div>
+    <p class="cover-sub">从线索到回款，一条链路管到底</p>
+    <p class="cover-meta">版本：v6.5（单据审批与流程串联）<br/>发布日期：2026 年 11 月<br/>适用对象：销售专员 / 销售经理 / 销售总监 / 财务 / 产品运营 / 系统管理员</p>
+  </div>
+</section>
+<section role="cover">
+<nav class="doc-toc" aria-label="文档目录">
+<p class="toc-title">目录</p>
+<ol class="toc-list">
+<li><a href="#section-1">一、产品概述</a>
+<ol class="toc-sub">
+<li><a href="#section-1-1">1.1 业务链路</a></li>
+<li><a href="#section-1-2">1.2 三条铁律</a></li>
+</ol></li>
+<li><a href="#section-2">二、快速开始</a>
+<ol class="toc-sub">
+<li><a href="#section-2-1">2.1 登录</a></li>
+<li><a href="#section-2-2">2.2 界面结构</a></li>
+<li><a href="#section-2-3">2.3 快速新建</a></li>
+</ol></li>
+<li><a href="#section-3">三、工作台</a>
+<li><a href="#section-4">四、客户管理</a>
+<ol class="toc-sub">
+<li><a href="#section-4-1">4.1 客户列表</a></li>
+<li><a href="#section-4-2">4.2 客户 360</a></li>
+<li><a href="#section-4-3">4.3 附件</a></li>
+</ol></li>
+<li><a href="#section-5">五、联系人</a>
+<li><a href="#section-6">六、线索管理</a>
+<ol class="toc-sub">
+<li><a href="#section-6-1">6.1 线索状态</a></li>
+<li><a href="#section-6-2">6.2 线索转化</a></li>
+</ol></li>
+<li><a href="#section-7">七、商机管理</a>
+<ol class="toc-sub">
+<li><a href="#section-7-1">7.1 阶段与赢单率</a></li>
+<li><a href="#section-7-2">7.2 双视图</a></li>
+</ol></li>
+<li><a href="#section-8">八、交易管理</a>
+<ol class="toc-sub">
+<li><a href="#section-8-1">8.1 交易总览</a></li>
+<li><a href="#section-8-2">8.2 合同管理</a></li>
+<li><a href="#section-8-3">8.3 订单管理</a></li>
+<li><a href="#section-8-4">8.4 发货计划</a></li>
+<li><a href="#section-8-5">8.5 出库管理</a></li>
+<li><a href="#section-8-6">8.6 开票管理</a></li>
+<li><a href="#section-8-7">8.7 应收管理</a></li>
+<li><a href="#section-8-8">8.8 收款核销（核心）</a></li>
+<li><a href="#section-8-9">8.9 退货退款</a></li>
+</ol></li>
+<li><a href="#section-9">九、产品目录与产品管理</a>
+<ol class="toc-sub">
+<li><a href="#section-9-1">9.1 产品目录</a></li>
+<li><a href="#section-9-2">9.2 产品详情</a></li>
+<li><a href="#section-9-3">9.3 新增与编辑</a></li>
+</ol></li>
+<li><a href="#section-10">十、跟进记录</a>
+<li><a href="#section-11">十一、消息通知</a>
+<li><a href="#section-12">十二、导入导出</a>
+<ol class="toc-sub">
+<li><a href="#section-12-1">12.1 导出</a></li>
+<li><a href="#section-12-2">12.2 导入导出产品</a></li>
+<li><a href="#section-12-3">12.3 导入客户</a></li>
+<li><a href="#section-12-4">12.4 批量导出中心</a></li>
+</ol></li>
+<li><a href="#section-13">十三、修改记录与客户历史视图</a>
+<ol class="toc-sub">
+<li><a href="#section-13-1">13.1 全模块修改记录</a></li>
+<li><a href="#section-13-2">13.2 历史客户与只读规则</a></li>
+<li><a href="#section-13-3">13.3 与其他角色的关系</a></li>
+</ol></li>
+<li><a href="#section-14">十四、系统管理</a>
+<ol class="toc-sub">
+<li><a href="#section-14-1">13.1 用户管理</a></li>
+<li><a href="#section-14-2">13.2 角色权限</a></li>
+<li><a href="#section-14-3">13.3 部门管理</a></li>
+<li><a href="#section-14-4">13.4 数据字典</a></li>
+<li><a href="#section-14-5">13.5 操作日志</a></li>
+</ol></li>
+<li><a href="#section-15">十五、权限模型</a>
+<li><a href="#section-16">十六、定时任务</a>
+<li><a href="#section-17">十七、部署与运维</a>
+<ol class="toc-sub">
+<li><a href="#section-17-1">16.1 启动顺序</a></li>
+<li><a href="#section-17-2">16.2 关键配置</a></li>
+<li><a href="#section-17-3">16.3 附件存储</a></li>
+<li><a href="#section-17-4">16.4 升级说明</a></li>
+<li><a href="#section-17-5">16.5 备份建议</a></li>
+</ol></li>
+<li><a href="#section-18">十八、常见问题</a>
+<li><a href="#section-19">附录 A：状态字典</a>
+<li><a href="#section-20">附录 B：单号规则</a>
+<li><a href="#section-21">附录 C：核销示例</a>
+</li></ol></nav>
+</section>
+<section class="chapter" data-page-restart="1">
+<p><strong>版本</strong>：v3.0（商用增强版）</p>
+<p><strong>更新日期</strong>：2026-11-06</p>
+<p><strong>适用对象</strong>：销售专员、销售经理、销售总监、财务、系统管理员</p>
+<h1 id="section-1">一、产品概述</h1>
+<p>商序云是一套面向 B2B 销售团队的销售运营平台，把「线索获取 → 客户经营 → 商机推进 → 合同签订 → 订单履约 → 开票出库 → 应收回款 → 退货退款」串成一条链路。与只记录客户资料的轻量 CRM 不同，商序云同时管理<strong>履约</strong>与<strong>资金</strong>：每一笔钱从哪张单来、冲了哪张应收、还剩多少预收，都能追到底。</p>
+<h2 id="section-1-1">1.1 业务链路</h2>
+<pre class="code">线索 ─转化─▶ 客户 ─▶ 商机 ─赢单─▶ 合同 ─▶ 订单 ─┬─▶ 发货计划 ─▶ 出库单 ─┐
+                                              ├─▶ 开票（发票）        ├─▶ 应收单 ─▶ 收款单 ─▶ 核销
+                                              └─▶ 退货退款 ◀──────────┘</pre>
+<h2 id="section-1-2">1.2 三条铁律</h2>
+<p class="step">1. <strong>订单必须审核通过</strong>才能生成出库单、应收单，避免未审先发。</p>
+<p class="step">2. <strong>收款单是唯一记账入口</strong>：合同回款计划只是「计划」，实际收款一律通过收款单登记并核销到应收单。</p>
+<p class="step">3. <strong>状态由核销结果推导</strong>：应收余额、订单收款状态、合同回款状态都由核销自动回写，不需要手工改。</p>
+<h1 id="section-2">二、快速开始</h1>
+<h2 id="section-2-1">2.1 登录</h2>
+<p>浏览器打开系统地址，输入账号密码。演示环境提供四个账号，密码均为 <code>123456</code>：</p>
+<table><tr><th>账号</th><th>角色</th><th>数据范围</th></tr>
+<tr><td>admin</td><td>超级管理员</td><td>全部数据 + 系统管理</td></tr>
+<tr><td>manager01</td><td>销售总监</td><td>全部业务数据</td></tr>
+<tr><td>manager02</td><td>销售经理</td><td>本部门及下属数据</td></tr>
+<tr><td>sales01</td><td>销售专员</td><td>仅本人负责的数据</td></tr></table>
+<h2 id="section-2-2">2.2 界面结构</h2>
+<ul>
+<li><strong>左侧导航</strong>：工作台、客户、联系人、线索、商机、交易管理（8 个子模块）、产品、跟进记录、系统管理。</li>
+<li><strong>顶部栏</strong>：面包屑、快速新建、消息通知（铃铛）、个人菜单。</li>
+<li><strong>主体区</strong>：统计卡 → 筛选栏 → 数据表格 → 分页。</li>
+</ul>
+<h2 id="section-2-3">2.3 快速新建</h2>
+<p>点击顶部「快速新建」，可直接跳转到客户、线索、商机、合同、订单的新建表单，无需先进入模块。</p>
+<h1 id="section-3">三、工作台</h1>
+<p>工作台是每天上班第一屏，回答三个问题：业绩怎么样、今天该做什么、钱收得如何。</p>
+<table><tr><th>区域</th><th>内容</th></tr>
+<tr><td>KPI 卡片</td><td>客户总数、新增客户、进行中商机金额、应收未收（含逾期张数）</td></tr>
+<tr><td>销售阶段分布</td><td>各阶段商机金额与数量</td></tr>
+<tr><td>业绩趋势</td><td>12 个月的客户新增、签约金额、回款金额</td></tr>
+<tr><td>客户来源</td><td>来源渠道占比</td></tr>
+<tr><td>业绩排行</td><td>按负责人统计商机金额</td></tr>
+<tr><td>待办事项</td><td>待跟进客户、待出库订单、待收款、待审批合同</td></tr>
+<tr><td>最近跟进</td><td>团队最新跟进动态</td></tr></table>
+<p><strong>操作提示</strong>：点击待办中的任意条目，会跳转到对应模块的列表页。</p>
+<h1 id="section-4">四、客户管理</h1>
+<h2 id="section-4-1">4.1 客户列表</h2>
+<p>支持按名称/编号/手机号搜索，按客户级别、行业、公私海筛选。列表展示客户名称、级别、行业、负责人、下次跟进时间等。</p>
+<ul>
+<li><strong>我的客户 / 公海客户</strong>：右上角切换。公海客户对所有销售可见，领取后进入个人私海。</li>
+<li><strong>领取</strong>：公海客户点击「领取」，负责人变更为当前用户。</li>
+<li><strong>转移</strong>：把客户转给其他销售。</li>
+<li><strong>放入公海</strong>：释放客户，供团队重新领取。</li>
+</ul>
+<h2 id="section-4-2">4.2 客户 360</h2>
+<p>点击客户名称打开右侧抽屉，一屏查看该客户全貌：</p>
+<table><tr><th>标签页</th><th>内容</th></tr>
+<tr><td>基本信息</td><td>编号、级别、行业、来源、联系方式、地址、负责人、下次跟进时间</td></tr>
+<tr><td>联系人</td><td>该客户下的联系人，可标记关键决策人</td></tr>
+<tr><td>商机</td><td>关联商机及阶段、金额</td></tr>
+<tr><td>合同</td><td>关联合同及签订、回款状态</td></tr>
+<tr><td>附件</td><td>营业执照、合作协议等文件</td></tr>
+<tr><td>跟进记录</td><td>按时间倒序的跟进时间轴</td></tr></table>
+<p>顶部统计条展示联系人数量、商机数量、商机总额、合同总额、跟进次数。</p>
+<h2 id="section-4-3">4.3 附件</h2>
+<p>在客户 360 的「附件」标签页点击「上传附件」，支持 PDF、图片、Office 文档、压缩包等，单个文件不超过 20MB。点击文件名可直接下载，上传人可删除。</p>
+<h1 id="section-5">五、联系人</h1>
+<p>管理客户侧的具体对接人：姓名、所属客户、职位、手机、邮箱、是否关键联系人。</p>
+<ul>
+<li><strong>关键联系人</strong>用于标记决策链上的核心角色，商机推进时优先参考。</li>
+<li>支持按客户、姓名、手机号检索。</li>
+</ul>
+<h1 id="section-6">六、线索管理</h1>
+<p>线索是尚未确认价值的原始商机信息。</p>
+<h2 id="section-6-1">6.1 线索状态</h2>
+<p><code>新线索 → 跟进中 → 已确认 → 已转化 / 无效</code></p>
+<h2 id="section-6-2">6.2 线索转化</h2>
+<p>点击「转化」，系统按填写内容一次性生成：</p>
+<ul>
+<li>一个客户（可指定客户名称与级别）</li>
+<li>一个联系人（来自线索联系人信息）</li>
+<li>一个商机（可选，填写商机名称与金额）</li>
+</ul>
+<p>转化后线索状态变为「已转化」，并记录转化目标客户。</p>
+<p><strong>注意</strong>：已转化的线索不能重复转化，避免产生重复客户。</p>
+<h1 id="section-7">七、商机管理</h1>
+<h2 id="section-7-1">7.1 阶段与赢单率</h2>
+<table><tr><th>阶段</th><th>说明</th><th>默认赢单率</th></tr>
+<tr><td>接洽</td><td>建立联系，确认需求方向</td><td>10%</td></tr>
+<tr><td>需求</td><td>需求调研与方案沟通</td><td>30%</td></tr>
+<tr><td>报价</td><td>已提交报价</td><td>50%</td></tr>
+<tr><td>谈判</td><td>商务条款谈判</td><td>70%</td></tr>
+<tr><td>赢单</td><td>成交</td><td>100%</td></tr>
+<tr><td>输单</td><td>放弃</td><td>0%</td></tr></table>
+<h2 id="section-7-2">7.2 双视图</h2>
+<ul>
+<li><strong>列表视图</strong>：适合批量查看、筛选、编辑。</li>
+<li><strong>看板视图</strong>：按阶段分列，可拖拽卡片推进阶段，列头显示该阶段商机数量与金额合计。</li>
+</ul>
+<p><strong>操作提示</strong>：拖拽到「赢单」会自动记录赢单时间；赢单后建议立即创建合同。</p>
+<h1 id="section-8">八、交易管理</h1>
+<p>交易管理是系统的核心，包含 8 个子模块。建议按「总览 → 合同 → 订单 → 发货 → 出库 → 开票 → 应收 → 收款」的顺序理解。</p>
+<h2 id="section-8-1">8.1 交易总览</h2>
+<p>一屏看全局：合同签订额、订单额、已出库额、应收未收、已回款、已开票金额；交易趋势图；交易流水（合同、订单、出库、收款、开票、退款六类事件按时间合并）；客户交易排行；链路待办。</p>
+<p>交易流水支持按类型筛选，是排查「这笔钱怎么来的」最快的入口。</p>
+<p><strong>单据流转与审批规则</strong>（合同 → 订单 → 出库 → 应收 → 收款 → 开票）：</p>
+<table><tr><th>单据</th><th>状态流转</th><th>关键规则</th></tr>
+<tr><td>合同</td><td>草稿 → 审批中 → 已审批 / 已驳回 → 已签订（可作废）</td><td>金额由明细汇总；下单额度受合同金额约束</td></tr>
+<tr><td>订单</td><td>草稿 → 审批中 → 已审核 / 已驳回 → 已取消</td><td>只有草稿/已驳回可编辑；关联合同时校验状态、客户、剩余额度</td></tr>
+<tr><td>出库单</td><td>待出库 → <strong>待审核 → 已审核</strong> → 已出库 → 已签收</td><td>审核前不能确认出库；<strong>审核通过时自动生成应收单</strong>（已存在则跳过）</td></tr>
+<tr><td>应收单</td><td><strong>待确认 → 已确认 / 已驳回</strong>（与收款状态并行）</td><td>只有「已确认」的应收才能登记收款核销</td></tr>
+<tr><td>收款单</td><td>已确认 → 已作废</td><td>唯一记账入口，核销后回写应收余额、订单收款状态、合同回款进度</td></tr>
+<tr><td>发票</td><td>待开票 → 已开票 → 已作废</td><td>独立于收款；校验「累计开票 ≤ 订单/合同金额」，防超开</td></tr></table>
+<p><strong>先货后款与先款后货</strong>：出库审核通过自动生成应收，对应「先货后款」；如果是预收款场景，可在应收页用「由合同生成」提前开应收，覆盖「先款后货」。</p>
+<h2 id="section-8-2">8.2 合同管理</h2>
+<p><strong>状态流转</strong>：<code>草稿 → 审批中 → 已审批 / 已驳回 → 已签订</code>，也可作废。</p>
+<ul>
+<li>新建合同时按 5:5 自动生成两期回款计划，可手工调整期数与金额。</li>
+<li>合同详情抽屉展示合同基本信息、回款计划、附件。</li>
+<li><strong>重要</strong>：回款计划只表达「计划」，不参与记账。合同详情中的「已回款」来自该合同下所有应收单的核销汇总。</li>
+</ul>
+<p><strong>回款登记</strong>：在合同详情点击某期计划的「回款登记」，系统会自动找到该合同的未结清应收单（没有则先按合同金额生成一张），把本次回款核销进去，并生成一张正式收款单。</p>
+<p><strong>合同明细</strong>：合同表单新增「合同明细」表格，可逐行添加产品/服务、单位、数量、单价，金额自动计算。</p>
+<ul>
+<li>有明细时，<strong>合同金额自动等于明细合计且不可手改</strong>（表单里会置灰并提示「已按明细合计自动计算」），避免金额与标的不符。</li>
+<li>不填明细时保留手填金额，适合框架合同（按实际下单结算）。</li>
+<li>合同详情展示「合同明细」区块，与下单进度、回款计划并列。</li>
+<li>合同金额变化后回款计划<strong>不会自动重算</strong>；如果计划合计与合同金额不一致，详情会显示黄色提示，需手动调整期数或金额。</li>
+</ul>
+<p><strong>合同额度与下单管控</strong>：合同详情新增「下单进度」，显示合同金额、已下单金额（该合同下未取消订单的合计）和剩余可下单金额。</p>
+<ul>
+<li>订单关联合同时，系统强制校验三件事：合同必须是「已审批」或「已签订」；订单客户必须与合同客户一致；订单金额不得超过合同剩余可下单金额。</li>
+<li>订单表单的「关联合同」是下拉选择，只列出该客户下可下单的合同，选中后显示「合同金额 / 已下单 / 剩余」；明细合计超过剩余时红色提示并禁止保存。</li>
+<li>不关联合同的订单仍可创建（小额直单），一旦关联就受上述规则约束。</li>
+<li>合同金额变更后剩余额度实时重算。</li>
+<li>不可下单的合同<strong>不会消失，而是在下拉里置灰并标注原因</strong>（如「合同草稿，需先审批或签订」「已超额 59880.00」），避免出现「找不到合同」的困惑；该客户一张合同都没有时会提示先去创建。</li>
+</ul>
+<h2 id="section-8-3">8.3 订单管理</h2>
+<p><strong>状态流转</strong>：<code>草稿 → 审批中 → 已审核 / 已驳回 → 已取消</code>。</p>
+<ul>
+<li>订单支持明细行：选择产品自动带出单价，数量 × 单价自动算金额，合计实时汇总。</li>
+<li><strong>关联合同</strong>：下拉选择，仅显示该客户下已审批/已签订且有剩余额度的合同；关联后校验客户一致与金额不超合同剩余额度，不关联则视为独立订单。</li>
+<li>只有<strong>已审核</strong>订单才能生成发货计划、出库单、应收单、发票。</li>
+<li>订单列表展示「出库状态」「收款状态」，均由下游单据自动回写。</li>
+</ul>
+<h2 id="section-8-4">8.4 发货计划</h2>
+<p>针对已审核订单安排发货：计划日期、计划数量（默认汇总订单明细）、仓库。</p>
+<ul>
+<li>状态：<code>待发货 → 已发货 / 已取消</code>。</li>
+<li>点击「生成出库单」把计划转为正式出库单，计划状态变「已发货」并回写出库单号。</li>
+<li>已生成出库单的订单不会出现在可选订单中，避免重复发货。</li>
+</ul>
+<h2 id="section-8-5">8.5 出库管理</h2>
+<p>由发货计划或订单生成，自动带出明细、收货人、收货地址。</p>
+<ul>
+<li>状态：<code>待出库 → 已出库 → 已签收</code>，可作废。</li>
+<li>支持维护物流公司与运单号。</li>
+<li>确认出库后回写订单出库状态：未出库 / 部分出库 / 已出库。</li>
+</ul>
+<h2 id="section-8-6">8.6 开票管理</h2>
+<p>从订单或合同发起开票申请，自动带出客户、抬头、金额。</p>
+<ul>
+<li>发票类型：增值税专用发票、普通发票、电子发票。</li>
+<li>税额按价税合计倒算：<code>税额 = 金额 ÷ (1 + 税率) × 税率</code>。</li>
+<li>状态：<code>待开票 → 已开票 → 已作废</code>。确认开票时录入发票号与开票日期。</li>
+</ul>
+<h2 id="section-8-7">8.7 应收管理</h2>
+<p>应收单是「客户欠我们多少钱」的凭证，来源为订单或合同。</p>
+<ul>
+<li>顶部统计：应收总额、已收款、未收款、逾期未收（含张数）。</li>
+<li>账龄列显示逾期天数，逾期单据标红。</li>
+<li>状态：<code>未收款 / 部分收款 / 已收款</code>，由核销结果自动计算。</li>
+</ul>
+<p><strong>注意</strong>：应收单不允许手工修改已收金额，收款必须走「收款核销」。</p>
+<h2 id="section-8-8">8.8 收款核销（核心）</h2>
+<p>收款核销是资金记账的唯一入口。</p>
+<p><strong>操作步骤</strong></p>
+<p class="step">1. 进入「交易管理 → 收款核销」，点击「登记收款」。</p>
+<p class="step">2. 选择客户，填写收款金额、收款日期、收款方式（银行转账/现金/承兑汇票/在线支付/其他）、收款账户、凭证号。</p>
+<p class="step">3. 系统自动列出该客户<strong>未结清</strong>的应收单。勾选要冲销的应收单，默认按剩余金额核销，可手工调整。</p>
+<p class="step">4. 页面实时显示「已分配 / 收款金额」，分配额不能超过收款金额。</p>
+<p class="step">5. 确认登记后，系统在同一事务内完成：生成收款单 → 写入核销明细 → 更新应收已收金额与状态 → 回写订单收款状态与合同回款状态。</p>
+<p><strong>预收款</strong></p>
+<p>不勾选任何应收单直接保存，整笔记为预收款（预收余额 = 收款金额）。后续在列表点击「核销」，选择应收单与金额即可继续核销。</p>
+<p><strong>作废与冲销</strong></p>
+<p>点击「作废」会把该收款单已核销的金额<strong>逐笔反向冲回</strong>对应应收单，应收余额恢复到核销前，订单与合同状态同步回退。作废单保留记录，状态显示「已作废」。</p>
+<p><strong>核销规则</strong></p>
+<table><tr><th>规则</th><th>说明</th></tr>
+<tr><td>不能超额核销</td><td>单张应收的核销额不得超过其剩余金额</td></tr>
+<tr><td>不能跨客户</td><td>收款单与应收单必须属于同一客户</td></tr>
+<tr><td>不能重复</td><td>同一张收款单不能对同一应收单重复核销</td></tr>
+<tr><td>可一冲多</td><td>一张收款单可拆成多条核销明细，冲多张应收</td></tr>
+<tr><td>并发保护</td><td>采用乐观锁，两人同时操作同一应收单时后者会提示刷新重试</td></tr></table>
+<h2 id="section-8-9">8.9 退货退款</h2>
+<p>关联订单创建退货单：退货日期、退货数量、退货金额、退款金额、退货原因。</p>
+<ul>
+<li>状态：<code>待审核 → 已通过 / 已驳回 → 已退款</code>。</li>
+<li>校验：退款金额不得大于退货金额。</li>
+<li>确认退款时记录退款时间，退款金额在交易流水中以红色标记。</li>
+</ul>
+<h1 id="section-9">九、产品目录与产品管理</h1>
+<h2 id="section-9-1">9.1 产品目录</h2>
+<p>「产品目录」是<strong>左侧菜单中的独立页面</strong>，与「产品管理」分开：目录页管树和目录内产品，产品页管全部产品的列表与档案。</p>
+<p>页面左侧是<strong>两级树形目录</strong>，默认分为「软件产品 / 实施服务 / 运维与部署 / 硬件设备」四大类，共 11 个节点，节点右侧显示该目录下的产品数量。右侧上半部分是当前目录的信息卡（名称、编码、状态、本级产品数、含子目录数、子分类数、排序、备注），下半部分是该目录下的产品列表。</p>
+<ul>
+<li><strong>筛选</strong>：点击任意目录，右侧只显示该目录及其子目录下的产品；点击「全部产品」恢复。</li>
+<li><strong>新增分类</strong>：点击目录右上角「+ 根目录」创建一级目录；或鼠标移到节点上，点右侧「⋯」→「新增子分类」。</li>
+<li><strong>目录内新增产品</strong>：在目录页点「新增产品」，表单会自动预选当前目录。</li>
+<li><strong>编辑 / 停用 / 删除</strong>：同样在「⋯」菜单中操作。停用后节点名称置灰并加删除线；<strong>有子分类或有产品的目录不能删除</strong>，需先移走。</li>
+<li>顶部支持按名称筛选目录节点。</li>
+</ul>
+<h2 id="section-9-2">9.2 产品详情</h2>
+<p>点击产品名称打开右侧详情抽屉，包含四部分：</p>
+<table><tr><th>区域</th><th>内容</th></tr>
+<tr><td>头部</td><td>名称、编码、目录、在售/停售状态，可直接「编辑」或「上架/停售」</td></tr>
+<tr><td>统计卡</td><td>销售价、成本价、毛利率、累计销量、累计销售额（数据来自订单明细实时汇总）</td></tr>
+<tr><td>基本信息</td><td>编码、目录、规格、单位、税率、各类价格、排序、关联订单数、创建人/时间、备注</td></tr>
+<tr><td>标签页</td><td>基本信息、产品描述、销售记录（最近 10 条订单明细）、附件</td></tr></table>
+<p>附件标签页可上传产品手册、报价单、图片等，规则与客户/合同附件一致。</p>
+<h2 id="section-9-3">9.3 新增与编辑</h2>
+<p>点击产品管理页「新增产品」，或从列表/详情抽屉点「编辑」，填写：</p>
+<table><tr><th>字段</th><th>说明</th></tr>
+<tr><td>产品编码</td><td><strong>留空自动生成</strong> <code>PRD + 4 位序号</code>（如 PRD0009）；手填时必须唯一；<strong>编辑时不可修改</strong></td></tr>
+<tr><td>产品名称</td><td>必填</td></tr>
+<tr><td>所属目录</td><td>按一级/二级分组选择，保存后自动填充分类名称</td></tr>
+<tr><td>规格型号 / 单位</td><td>如「50 账号 / 年」「套/年」「人天」</td></tr>
+<tr><td>销售价 / 成本价</td><td>自动计算预估毛利率，表单底部实时显示</td></tr>
+<tr><td>最低成交价</td><td>用于折扣管控，<strong>不得高于销售价</strong></td></tr>
+<tr><td>默认税率 / 排序 / 销售状态</td><td>默认 6%、0、在售</td></tr>
+<tr><td>产品描述 / 备注</td><td>面向客户的长说明与内部备注</td></tr></table>
+<p><strong>上下架</strong>：列表「更多」或详情抽屉可切换在售/停售；停售产品仍保留在历史订单中。</p>
+<p><strong>删除保护</strong>：已被订单明细引用的产品不能删除（例如企业版已出现在 6 张订单中），系统会提示改为「停售」，避免历史订单失去产品信息。</p>
+<h1 id="section-10">十、跟进记录</h1>
+<p>记录与客户、线索、商机、合同的每一次接触：跟进方式（电话/拜访/邮件/微信/会议/其他）、内容、下次跟进时间。</p>
+<ul>
+<li>可按业务对象类型与对象 ID 检索。</li>
+<li>下次跟进时间会进入工作台待办，并由定时任务推送提醒。</li>
+</ul>
+<h1 id="section-11">十一、消息通知</h1>
+<p>点击顶部铃铛查看未读消息，红点数字为未读数。</p>
+<table><tr><th>通知类型</th><th>触发时机</th></tr>
+<tr><td>应收逾期</td><td>每天 09:00 扫描逾期未结清应收，通知负责人</td></tr>
+<tr><td>跟进提醒</td><td>每天 09:05 扫描 24 小时内到期的下次跟进时间</td></tr>
+<tr><td>公海回收</td><td>每天 09:10 将超过 30 天未跟进的私海客户自动回收至公海</td></tr>
+<tr><td>系统通知</td><td>系统升级、重要变更</td></tr></table>
+<p>支持「全部已读」，点击单条消息会标记已读并跳转到对应模块。同一单据同一天只提醒一次，避免重复打扰。</p>
+<h1 id="section-12">十二、导入导出</h1>
+<h2 id="section-12-1">12.1 导出</h2>
+<ul>
+<li><strong>客户列表</strong>：点击「导出」，下载 CSV（UTF-8 BOM，Excel 可直接打开，中文不乱码）。</li>
+<li><strong>线索</strong>、<strong>应收</strong>：通过接口 <code>/api/data/export/leads</code>、<code>/api/data/export/receivables</code> 导出同结构 CSV。</li>
+<li>导出受数据权限限制：销售专员只能导出自己的数据。</li>
+</ul>
+<h2 id="section-12-2">12.2 导入导出产品</h2>
+<p>产品页提供「导入」「导出」两个按钮：</p>
+<p class="step">1. 点「导入」→「下载导入模板」，得到 13 列 CSV：产品编码、产品名称、所属目录、规格型号、单位、销售价、成本价、最低成交价、税率(%)、排序、状态、产品描述、备注。</p>
+<p class="step">2. <strong>产品编码留空会自动生成</strong>；「所属目录」按分类名称匹配，名称不存在会跳过该行并提示先去产品目录页创建。</p>
+<p class="step">3. 重名产品、重复编码、格式错误的行会跳过并在弹窗中逐行列出原因。</p>
+<p class="step">4. 「导出」的产品 CSV 列顺序与模板完全一致，可在 Excel 里改完直接导回，适合批量调价。</p>
+<h2 id="section-12-3">12.3 导入客户</h2>
+<p class="step">1. 准备 CSV 文件，首行为表头，列顺序：<code>客户名称,级别,行业,来源,电话,城市,地址,备注</code>。</p>
+<p class="step">2. 客户名称必填；重名客户自动跳过并在结果中提示。</p>
+<p class="step">3. 点击客户列表「导入」，选择文件。</p>
+<p class="step">4. 系统返回成功条数、跳过条数，并列出未导入原因。</p>
+<p><strong>提示</strong>：Excel 文件请先「另存为 CSV UTF-8」。</p>
+<h2 id="section-12-4">12.4 批量导出中心</h2>
+<p>左侧菜单「系统管理 → 数据导出」，也可从客户、线索、应收、产品列表页点「批量导出」直接进入（会自动选中对应类型）。原来的「导出」按钮仍保留，用于一键导出全量。</p>
+<table><tr><th>区域</th><th>能做什么</th></tr>
+<tr><td>数据类型</td><td>客户 / 线索 / 应收单 / 产品，切换后筛选项和导出列自动变化</td></tr>
+<tr><td>查询条件</td><td>关键词、状态、客户级别、行业、来源、客户池、创建时间起止；点「查询」预览，「重置」清空</td></tr>
+<tr><td>导出列</td><td>按列勾选，默认全选；表头与取值都是中文</td></tr>
+<tr><td>预览结果</td><td>分页显示符合条件的数据，可勾选具体行；底部显示总条数与已选条数</td></tr>
+<tr><td>导出</td><td>「导出查询结果」导出当前条件下的全部数据；「导出选中项」只导出勾选行</td></tr></table>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>导出的行与列完全按界面选择，不再是固定全量；结果仍是带 UTF-8 BOM 的 CSV，Excel 直接打开不乱码。</li>
+<li>所有码值（级别、行业、状态、来源类型等）走统一字典转中文，与修改记录、快速导出口径一致。</li>
+<li>数据权限照常生效：业务员只能查到并导出自己数据范围内的客户/线索/应收；产品为主数据，不受负责人限制。</li>
+<li>单次导出上限 10000 条，超过请先缩小时间或筛选范围。</li>
+</ul>
+<h1 id="section-13">十三、修改记录与客户历史视图</h1>
+<h2 id="section-13-1">13.1 全模块修改记录</h2>
+<p>系统会自动记录所有核心单据的<strong>字段级变更</strong>，不需要人工填写。覆盖客户、联系人、线索、商机、合同、订单、出库单、发货计划、发票、应收单、收款单、退货单、产品、产品目录与跟进记录。</p>
+<table><tr><th>记录内容</th><th>说明</th></tr>
+<tr><td>时间 / 操作人</td><td>谁在什么时候改的</td></tr>
+<tr><td>操作</td><td>修改、新建、删除、领取、转移、放入公海、自动回收</td></tr>
+<tr><td>字段</td><td>显示中文名（如「负责人」「客户池」「单价」）</td></tr>
+<tr><td>变更前 / 变更后</td><td>状态值自动翻译成中文（如「私海 → 公海」）</td></tr></table>
+<p><strong>三种查看方式</strong>：</p>
+<p class="step">1. 任意列表页的操作列点「记录」，弹出该单据的全部变更。</p>
+<p class="step">2. 客户 360、合同详情、产品详情里都有「修改记录」标签页。</p>
+<p class="step">3. 左侧菜单「系统管理 → 修改记录」进入全量检索中心，可按模块、单号、字段、操作人、变更值筛选。</p>
+<p>记录由后端切面在更新前后自动比对数据库快照生成，业务代码无需改动；记录失败只写告警日志，不影响正常操作。技术字段（id、创建时间、version 等）不记录。</p>
+<p><strong>码值统一显示中文</strong>：字段名（性别、关键联系人、状态、客户池等）与取值（男/女、是/否、跟进中、A类（重点）、私海/公海、负责人姓名等）都由统一字典服务翻译，数据字典 <code>sys_dict</code> 里新增的项会自动生效，无需改代码。<code>PART</code> 这类在不同模块含义不同的码值会按业务类型区分（应收单显示「部分收款」、回款计划显示「部分回款」、出库进度显示「部分出库」）。CSV 导出同样输出中文，导入时会自动把中文还原成系统码值，两种写法都兼容。</p>
+<h2 id="section-13-2">13.2 历史客户与只读规则</h2>
+<p>客户被<strong>转移负责人、放入公海后被他人领取、或被定时任务自动回收</strong>后，原负责人并不会彻底失去这条客户：</p>
+<ul>
+<li>「我的客户」里不再显示（保证同一时刻只有一个负责人，避免撞单）。</li>
+<li>「历史客户」标签里<strong>仍能看到摘要</strong>：客户名称、编号、级别、行业、当前负责人、状态。</li>
+<li>敏感信息全部隐藏：电话、网站、省市区、详细地址、备注、简称、规模、跟进时间。</li>
+<li>客户 360 详情显示橙色提示「该客户已移交，仅可查看摘要」，不展示联系人、商机、合同、跟进记录与金额，附件只能下载不能上传或删除。</li>
+<li>编辑、删除、转移、放入公海、再次领取、新增联系人与跟进记录<strong>全部被后端拒绝</strong>，前端按钮也会隐藏。</li>
+</ul>
+<p>修改记录对此类用户同样过滤敏感字段的历史值，避免通过审计日志绕过脱敏。</p>
+<h2 id="section-13-3">13.3 与其他角色的关系</h2>
+<table><tr><th>角色数据范围</th><th>客户被 B 领取后</th></tr>
+<tr><td>业务员（SELF）</td><td>仅在「历史客户」看到脱敏摘要</td></tr>
+<tr><td>销售经理（DEPT）</td><td>若 B 在同部门，仍可见完整信息并可操作</td></tr>
+<tr><td>总监 / 管理员（ALL）</td><td>始终可见完整信息并可操作</td></tr></table>
+<h1 id="section-14">十四、系统管理</h1>
+<h2 id="section-14-1">13.1 用户管理</h2>
+<p>新增/编辑用户：账号、姓名、手机、邮箱、部门、岗位、角色、状态。支持重置密码。</p>
+<h2 id="section-14-2">13.2 角色权限</h2>
+<p>角色由两部分组成：</p>
+<ul>
+<li><strong>功能权限</strong>：菜单与按钮级权限，权限树按模块分组（工作台、客户、线索、商机、交易、收款、产品、系统等）。</li>
+<li><strong>数据权限</strong>：<code>全部数据 / 本部门及下属 / 仅本人</code>。</li>
+</ul>
+<p>新建角色时勾选权限树，保存后该角色下所有用户即时生效（登录态中的权限每次请求校验）。</p>
+<h2 id="section-14-3">13.3 部门管理</h2>
+<p>树形结构维护组织架构，支持多级部门。部门影响数据权限的「本部门及下属」范围。</p>
+<h2 id="section-14-4">13.4 数据字典</h2>
+<p>维护各类下拉选项与状态标签，如客户级别、行业、来源、合同状态、收款方式等。修改字典后前端标签自动更新。</p>
+<h2 id="section-14-5">13.5 操作日志</h2>
+<p>记录所有写操作：操作人、模块、类型、请求地址、IP、耗时、参数、异常信息。支持按模块与类型筛选，是排查「谁改了这张单」的依据。</p>
+<h1 id="section-15">十五、权限模型</h1>
+<p>系统采用「功能权限 + 数据权限」双层控制：</p>
+<table><tr><th>层级</th><th>控制点</th><th>示例</th></tr>
+<tr><td>功能权限</td><td>菜单可见性、按钮可见性、接口调用</td><td>没有 <code>crm:payment:cancel</code> 就看不到「作废」按钮，直接调接口返回 403</td></tr>
+<tr><td>数据权限</td><td>列表与详情的可见范围</td><td>销售专员只能看到自己负责的客户、订单、应收、收款</td></tr></table>
+<p><strong>公海例外</strong>：公海客户对所有销售可见，不受数据权限限制。</p>
+<h1 id="section-16">十六、定时任务</h1>
+<table><tr><th>任务</th><th>默认时间</th><th>说明</th></tr>
+<tr><td>逾期应收提醒</td><td>每天 09:00</td><td>扫描未结清且已过应收日期的单据，通知负责人</td></tr>
+<tr><td>跟进提醒</td><td>每天 09:05</td><td>扫描 24 小时内到期的下次跟进时间</td></tr>
+<tr><td>公海回收</td><td>每天 09:10</td><td>超过 30 天未跟进的私海客户自动回收</td></tr></table>
+<p><strong>配置项</strong>（<code>application.yml</code> 或环境变量）：</p>
+<table><tr><th>配置</th><th>环境变量</th><th>默认值</th></tr>
+<tr><td>是否启用</td><td><code>CRM_SCHEDULER_ENABLED</code></td><td>true</td></tr>
+<tr><td>公海回收天数</td><td><code>CRM_POOL_RECYCLE_DAYS</code></td><td>30</td></tr>
+<tr><td>跟进提醒窗口（小时）</td><td><code>CRM_FOLLOW_REMIND_HOURS</code></td><td>24</td></tr>
+<tr><td>逾期提醒 cron</td><td><code>CRM_CRON_RECEIVABLE</code></td><td><code>0 0 9 * * ?</code></td></tr></table>
+<p><strong>多实例部署</strong>：只让一个实例设置 <code>CRM_SCHEDULER_ENABLED=true</code>，其余设为 false，避免重复推送。</p>
+<h1 id="section-17">十七、部署与运维</h1>
+<h2 id="section-17-1">16.1 启动顺序</h2>
+<p class="step">1. <strong>MySQL</strong>：确保 <code>shangxu_crm</code> 库已初始化（<code>backend/sql/init.sql</code>）。</p>
+<p class="step">2. <strong>Redis</strong>：登录态依赖 Redis，未启动时登录会报 500。</p>
+<p class="step">3. <strong>后端</strong>：<code>mvn spring-boot:run -Dspring-boot.run.arguments=&quot;--server.port=8080&quot;</code>。</p>
+<p class="step">4. <strong>前端</strong>：<code>npm run dev</code>，或使用 Nginx 托管 <code>dist</code>。</p>
+<h2 id="section-17-2">16.2 关键配置</h2>
+<table><tr><th>配置</th><th>说明</th></tr>
+<tr><td><code>MYSQL_HOST/PORT/DB/USER/PASSWORD</code></td><td>数据库连接，优先于 <code>application-dev.yml</code></td></tr>
+<tr><td><code>REDIS_HOST/PORT/PASSWORD</code></td><td>Redis 连接，本地无密码时留空</td></tr>
+<tr><td><code>CRM_JWT_SECRET</code></td><td>JWT 密钥，生产必须替换</td></tr>
+<tr><td><code>CRM_UPLOAD_DIR</code></td><td>附件存储目录，默认 <code>./data/uploads</code></td></tr></table>
+<h2 id="section-17-3">16.3 附件存储</h2>
+<p>附件保存在 <code>CRM_UPLOAD_DIR</code> 下的 <code>年/月/UUID.扩展名</code>。<strong>备份时必须同时备份数据库与该目录</strong>，否则附件记录会指向丢失的文件。</p>
+<p>建议生产环境把该目录挂载到独立数据盘或对象存储。</p>
+<h2 id="section-17-4">16.4 升级说明</h2>
+<ul>
+<li>v2 → v3 使用增量脚本 <code>backend/sql/migration_v3_commercial.sql</code>，只新增表与字段，不动历史数据。</li>
+<li>升级后需重启后端；前端路由变化，需重新构建或重启 dev server。</li>
+<li>升级会为 21 张业务表增加 <code>version</code> 字段（乐观锁），不影响已有数据。</li>
+</ul>
+<h2 id="section-17-5">16.5 备份建议</h2>
+<table><tr><th>对象</th><th>频率</th><th>方式</th></tr>
+<tr><td>MySQL</td><td>每日</td><td><code>mysqldump --single-transaction shangxu_crm</code></td></tr>
+<tr><td>附件目录</td><td>每日</td><td>目录打包或对象存储同步</td></tr>
+<tr><td>配置文件</td><td>变更时</td><td>纳入版本管理，密钥单独保管</td></tr></table>
+<h1 id="section-18">十八、常见问题</h1>
+<p><strong>Q1：登录提示「账号或密码错误」，日志显示「登录失败: null」</strong></p>
+<p>多为数据库连不上或库名错误。检查 <code>MYSQL_DB</code> 是否为 <code>shangxu_crm</code>（下划线），并确认库已初始化。</p>
+<p><strong>Q2：登录后页面 500 / 提示「系统繁忙」</strong></p>
+<p>检查 Redis 是否启动（<code>redis-cli ping</code> 应返回 PONG），以及前端代理是否指向正确的后端端口。</p>
+<p><strong>Q3：收款登记提示「核销金额超过应收余额」</strong></p>
+<p>应收单可能已被其他收款单核销。刷新页面后查看该应收的「已收金额」，按剩余金额重新填写。</p>
+<p><strong>Q4：作废收款单后，订单收款状态没变？</strong></p>
+<p>作废会同步回写。若未变化，检查该订单是否还有其它收款单在核销，状态按汇总结果计算。</p>
+<p><strong>Q5：上传附件失败</strong></p>
+<p>检查文件大小（≤20MB）与类型（PDF/图片/Office/压缩包等），并确认 <code>CRM_UPLOAD_DIR</code> 目录可写。</p>
+<p><strong>Q6：客户突然变成公海</strong></p>
+<p>公海回收任务把超过 30 天未跟进的私海客户自动回收。重新领取即可；如需关闭，将 <code>CRM_POOL_RECYCLE_DAYS</code> 设为 0。</p>
+<p><strong>Q7：导入客户全部失败</strong></p>
+<p>确认 CSV 为 UTF-8 编码、首行是表头、第一列是客户名称且不为空。</p>
+<h1 id="section-19">附录 A：状态字典</h1>
+<table><tr><th>业务</th><th>状态</th></tr>
+<tr><td>线索</td><td>新线索 / 跟进中 / 已确认 / 已转化 / 无效</td></tr>
+<tr><td>商机</td><td>接洽 / 需求 / 报价 / 谈判 / 赢单 / 输单</td></tr>
+<tr><td>合同</td><td>草稿 / 审批中 / 已审批 / 已驳回 / 已签订 / 已作废</td></tr>
+<tr><td>订单</td><td>草稿 / 审批中 / 已审核 / 已驳回 / 已取消</td></tr>
+<tr><td>发货计划</td><td>待发货 / 已发货 / 已取消</td></tr>
+<tr><td>出库单</td><td>待出库 / 已出库 / 已签收 / 已作废</td></tr>
+<tr><td>发票</td><td>待开票 / 已开票 / 已作废</td></tr>
+<tr><td>应收</td><td>未收款 / 部分收款 / 已收款</td></tr>
+<tr><td>收款单</td><td>已确认 / 已作废</td></tr>
+<tr><td>退货</td><td>待审核 / 已通过 / 已驳回 / 已退款</td></tr></table>
+<h1 id="section-20">附录 B：单号规则</h1>
+<p>统一格式：<code>前缀 + 年份 + 4 位序号</code>，由数据库序列表原子取号，并发下不会重号。</p>
+<table><tr><th>单据</th><th>前缀</th><th>示例</th></tr>
+<tr><td>客户</td><td>KH</td><td>KH20260019</td></tr>
+<tr><td>线索</td><td>XS</td><td>XS20260013</td></tr>
+<tr><td>商机</td><td>SJ</td><td>SJ20260015</td></tr>
+<tr><td>合同</td><td>HT</td><td>HT20260009</td></tr>
+<tr><td>订单</td><td>SO</td><td>SO20260011</td></tr>
+<tr><td>发货计划</td><td>DP</td><td>DP20260008</td></tr>
+<tr><td>出库单</td><td>DN</td><td>DN20260007</td></tr>
+<tr><td>应收单</td><td>AR</td><td>AR20260009</td></tr>
+<tr><td>收款单</td><td>SR</td><td>SR20260007</td></tr>
+<tr><td>退货单</td><td>RT</td><td>RT20260004</td></tr></table>
+<h1 id="section-21">附录 C：核销示例</h1>
+<p>某客户有一张应收单 AR20260003，金额 320,000，已收 160,000，剩余 160,000。</p>
+<p class="step">1. 登记收款 60,000，核销到 AR20260003 → 应收已收变为 220,000，状态「部分收款」；订单收款状态同步为「部分收款」。</p>
+<p class="step">2. 再登记收款 200,000，核销 100,000 到 AR20260003（结清），剩余 100,000 作为预收。</p>
+<p class="step">3. 后续新增一张应收 AR20260009，金额 80,000，用该收款单的预收余额核销 80,000。</p>
+<p class="step">4. 若发现第 2 步金额录错，作废该收款单：AR20260003 已收退回 160,000，状态回到「部分收款」，预收余额清零。</p>
+<p>*本手册对应商序云 v3.0，如系统升级请以实际界面为准。*</p>
+</section>
+</body>
+</html>
